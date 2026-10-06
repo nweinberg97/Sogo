@@ -83,7 +83,7 @@ Challenge invite links (`/#/c/nike-hoops?ref=u_me`) open the challenge directly 
 - **Payments behind an interface** (`src/lib/payments.ts`): `PaymentProvider` with a `SimulatedPaymentProvider`. A Stripe provider can replace it without touching screens.
 - **Auth** (`src/lib/auth.ts`) structured for Google and Apple OAuth (authorization-code redirect + backend exchange).
 - **html-to-image** for PNG export of share cards.
-- Plain CSS with design tokens (`src/styles/`). Fonts: Archivo (variable width, for scores and headlines) + Figtree.
+- Plain CSS with design tokens (`src/styles/`). Fonts: Archivo (variable width, for scores and headlines) + Figtree, bundled via Fontsource — no third-party font requests at runtime.
 
 ```
 src/

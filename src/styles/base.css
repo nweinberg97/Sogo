@@ -23,8 +23,8 @@
   --red: #d93a3f;
   --red-50: #fdecec;
 
-  --font-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
-  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Archivo Variable', 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'Figtree Variable', 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --r-xl: 28px;
   --r-lg: 20px;
