@@ -21,7 +21,7 @@ import type {
 import { defaultMilestones, sponsorMatchFor } from './economics';
 import { daysFromNow, hoursAgo, iso, nextWeekday, now } from './time';
 
-export const DB_VERSION = 3;
+export const DB_VERSION = 4;
 export const ME = 'u_me';
 
 // ───────────────────────────── Brands (illustrative concepts only) ─────────────────────────────
@@ -195,7 +195,10 @@ export function createSeed(persona: { kind: 'demo' } | { kind: 'fresh'; name: st
     : [];
 
   const goal_rewards: GoalReward[] = isDemo
-    ? [{ goal_id: 'g_steps_sept', reward_id: 'r_spotify', value: 30, status: 'unlocked', unlocked_at: daysFromNow(-9) }]
+    ? [
+        { goal_id: 'g_steps_sept', reward_id: 'r_spotify', value: 30, status: 'unlocked', unlocked_at: daysFromNow(-9) },
+        { goal_id: 'g_meditate', reward_id: 'r_spotify', value: 10, status: 'unlocked', unlocked_at: daysFromNow(-39) },
+      ]
     : [];
 
   const props: Prop[] = [
