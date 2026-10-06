@@ -28,6 +28,12 @@ jobs:
       - run: npm test
       - run: npm run typecheck
       - run: npm run build
+      - name: Check fonts are bundled
+        run: |
+          ls dist/assets/*.woff2
+          grep -q "Archivo Variable" dist/assets/*.css
+          grep -q "Figtree Variable" dist/assets/*.css
+          ! grep -q fonts.googleapis.com dist/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
